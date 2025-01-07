@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Song</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <h1>Hey <span id="crushNameDisplay"></span>, this is for you!</h1>
+        <video  autoplay loop controls >
+        <source src="videoplayback.mp4" type="video/mp4"> 
+        </video>
+    </div>
+
+    <script>
+         window.onload = function() {
+        var video = document.getElementById("myVideo");
+        video.muted = false; // Unmute the video after page load
+        video.play(); // Play the video
+         }
+        // Get the name from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const crushName = urlParams.get("name");
+        document.getElementById("crushNameDisplay").textContent = crushName;
+    </script>
+
+</body>
+</html>

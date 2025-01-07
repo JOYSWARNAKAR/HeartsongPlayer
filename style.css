@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EE66A6;
+    margin: 0;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: vibrate 0.5s infinite;
+}
+
+.heart:before, .heart:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    top: -50px;
+    left: 0;
+}
+
+.heart:after {
+    left: 50px;
+    top: 0;
+}
+
+
+
+@keyframes vibrate {
+    0% { transform: rotate(-45deg) translate(0, 0); }
+    25% { transform: rotate(-45deg) translate(-2px, 2px); }
+    50% { transform: rotate(-45deg) translate(2px, -2px); }
+    75% { transform: rotate(-45deg) translate(-2px, 2px); }
+    100% { transform: rotate(-45deg) translate(0, 0); }
+}
+
+.quote-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+h1 {
+    color: indigo;
+    font-style: italic;
+    border: none;
+    
+
+}
+
+audio {
+    margin-top: 20px;
+}
